@@ -3,8 +3,17 @@ fun main(){
     val anotherBus = setOf<String>("ErJohn", "Starliner", "Kersteen", "COOP")
     println(busNames)
 
+    //Partition for Set
     val check = busNames.contains("Jac Liner")
-    println(check)
+    println("Check Jac Liner: $check")
+    println()
+
+    val (longNames, shortNames) = busNames.partition { name -> name.length > 8
+    }
+
+    println("Long Names: $longNames")
+    println("Short Names: $shortNames")
+    println()
 
     for (name in busNames){
         println("$name ")
